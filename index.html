@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To the Best Mom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lavender: #E6E6FA;
+            --deep-plum: #5D3FD3;
+            --champagne: #F7E7CE;
+            --gold: #D4AF37;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--lavender);
+            overflow: hidden;
+        }
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(93, 63, 211, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.8s ease;
+        }
+
+        .pop-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            max-width: 400px;
+        }
+
+        .pop-card h1 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--deep-plum);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+
+        #yes-btn {
+            background: var(--deep-plum);
+            color: white;
+        }
+
+        #no-btn {
+            background: #ccc;
+            color: #666;
+            position: relative;
+        }
+
+        
+        #main-content {
+            display: none; 
+            height: 100vh;
+            text-align: center;
+            background: linear-gradient(135deg, var(--lavender) 0%, var(--champagne) 100%);
+            overflow-y: auto;
+        }
+
+        .hero {
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: var(--deep-plum);
+            margin-bottom: 10px;
+        }
+
+        .heart-icon {
+            font-size: 50px;
+            color: #ff69b4;
+            animation: pulse 1.5s infinite;
+        }
+
+        .message-box {
+            background: white;
+            margin: 20px auto;
+            padding: 40px;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid var(--gold);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div style="text-align: center; margin: 60px auto; padding: 20px;">
+    <div id="voucher" style="display: inline-block; background: white; border: 3px dashed var(--gold); padding: 30px; border-radius: 15px; cursor: pointer; transition: transform 0.3s;" onclick="sendHug()">
+        <span style="font-size: 40px;">🎟️</span>
+        <h3 style="margin: 10px 0; color: var(--deep-plum);">Official Hug Voucher</h3>
+        <p style="color: #666; font-style: italic;">Valid for: One giant, bone-crushing hug</p>
+        <p style="font-weight: bold; color: var(--gold);">[ CLICK TO REDEEM NOW ]</p>
+        <p style="font-size: 0.8rem; color: #999;">*Redeemable upon next arrival. No expiration date.*</p>
+    </div>
+    <div id="hug-message" style="display: none; margin-top: 20px; font-family: 'Dancing Script'; font-size: 1.8rem; color: var(--deep-plum); animation: pulse 1s infinite;">
+        HUG SENT! I'm squeezing you through the screen! 🤗💜
+    </div>
+</div>
+
+    <div id="overlay">
+        <div class="pop-card">
+            <h1>Mom, will you be my Valentine?</h1>
+            <div class="btn-group">
+                <button class="btn" id="yes-btn" onclick="revealSite()">Yes!</button>
+                <button class="btn" id="no-btn" onmouseover="moveNo()">No</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="hero">
+            <div class="heart-icon">💜</div>
+            <h2>Happy Valentine's Day, Mom!</h2>
+            <div class="message-box">
+                <p>To the woman who taught me everything about love, patience, and kindness.</p>
+                <p>Happy Valentines to my first and forever love!They say home is where the heart is, but I think home is wherever you are. Thank you for making our lives so bright and for the endless ways you show you care from the big milestones to the small 'just because' moments. You deserve to be spoiled today and every day. You’re my heart, my hero, and the best mum anyone could ever ask for.
+                     Thank you for being my constant support and my first best friend.</p>
+                <p style="font-family: 'Dancing Script'; font-size: 1.5rem; color: var(--gold);">I love you to the moon and back!</p>
+            </div>
+        </div>
+    </div>
+
+    <h3 style="font-family: 'Dancing Script'; font-size: 2.5rem; color: var(--deep-plum); margin-top: 50px;">Our Memories</h3>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
+    
+    <div style="background: white; padding: 15px 15px 40px 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transform: rotate(-2deg); width: 200px;">
+        <img src="mom7.jpeg" alt="Mom and Me" style="width: 100%; height: 400px; object-fit: cover; border: 1px solid #eee;">
+        <p style="margin-top: 10px; font-size: 0.9rem; color: #777;">Favorite Picture of us💜</p>
+    </div>
+
+    <div style="background: white; padding: 15px 15px 400px 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transform: rotate(3deg); width: 200px;">
+        <img src="mom5.jpeg" alt="Mom and Me" style="width: 100%; height: 400px; object-fit: cover; border: 1px solid #eee;">
+        <p style="margin-top: 10px; font-size: 0.9rem; color: #777;">Best Mom Ever!</p>
+    </div>
+
+</div>
+<div style="max-width: 500px; margin: 50px auto; text-align: left; background: rgba(255,255,255,0.6); padding: 30px; border-radius: 20px;">
+    <h3 style="font-family: 'Dancing Script'; font-size: 2rem; color: var(--deep-plum); text-align: center;">Why You're The Best Mom in the World:</h3>
+    <ul style="list-style: none; padding: 0; line-height: 2;">
+        <li style="border-bottom: 1px solid var(--lavender); padding: 10px 0;">✨ You always know exactly what to say.</li>
+        <li style="border-bottom: 1px solid var(--lavender); padding: 10px 0;">✨ You give the absolute best hugs.</li>
+        <li style="border-bottom: 1px solid var(--lavender); padding: 10px 0;">✨ Your strength inspires me every single day.</li>
+        <li style="border-bottom: 1px solid var(--lavender); padding: 10px 0;">✨ You make the world feel like a warmer place.</li>
+    </ul>
+</div>
+
+    <script>
+        function revealSite() {
+            document.getElementById('overlay').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('overlay').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+                document.body.style.overflow = 'auto';
+            }, 800);
+        }
+
+        function moveNo() {
+            const noBtn = document.getElementById('no-btn');
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = x + 'px';
+            noBtn.style.top = y + 'px';
+        }
+    
+    function sendHug() {
+    const voucher = document.getElementById('voucher');
+    const msg = document.getElementById('hug-message');
+    
+    
+    voucher.style.transform = "scale(0.9) rotate(-2deg)";
+    voucher.style.opacity = "0.7";
+    
+    
+    msg.style.display = "block";
+    
+    
+    setTimeout(() => {
+        alert("💖 Long-distance hug successfully delivered to Mom's heart! 💖");
+    }, 500);
+}
+    </script>
+</body>
+</html>
